@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<head>
+    <title>KotlecikiSMP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="jquery.scrollTo.min.js"></script>
+    <script>
+        jQuery(function($)
+        {
+            $.scrollTo(0);
+			
+            $('#kotlet').click(function() { $.scrollTo($('#bo'), 500); });
+            $('#logo').click(function() { $.scrollTo($('#bo'), 500); });
+			$('#hover1').click(function() { $.scrollTo($('#komendy'), 500); });
+            $('#hover2').click(function() { $.scrollTo($('#upgradyy'), 500); });
+            $('#hover3').click(function() { $.scrollTo($('#plecaki'), 500); });
+            $('#hover4').click(function() { $.scrollTo($('#grappler'), 500); });
+        }
+        );
+    </script>
+</head>
+
+<body>
+    <div id="bo"></div>
+    <nav id="main-nav">
+        <ul>
+            <div id="kotlet"><a href="#"><img src="png/kotlet.png" width="100px" height="100px"></a></div>
+            <div id="logo"><a href="#"><b><em>SMP<div id="smp">Kotleciki</div></em></b></a></div>
+            <li><a id="hover" href="http://localhost:8123"><b>Mapa</b></a></li>
+            <li><a id="hover1" href="#"><b>Komendy</b></a></li>
+            <li><a id="hover" href="#"><b>Craftingi &#x25BE;</b></a>
+                <ul class="dropdown">
+                    <li id="hover2"><a href="#">Upgrady</a></li>
+                    <li id="hover3"><a href="#">Plecaki</a></li>
+                    <li id="hover4"><a href="#">Grappler</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="infI">
+        <b>Informacje</b>
+    </div>
+
+    <div id="infb"></div>
+
+    <div id="textt">
+        <b>Informacje o serwerze:</b>
+        <br/>
+        - jeśli skacze się po zaoranej ziemi motyką to się nie niszczy
+        <br/>
+        - po śmierci na serwerze pojawia się <b>DeadChest</b> którego można zebrać w ciągu
+        <br/>
+        60 minut i jest 5 dead chestow na jednego gracza (jeśli gracz będzie miał 5
+        <br/>
+        dead chestow i zginie kolejny raz pierwszy dead chest znika)
+        <br/>
+        - na serwerze są upgrady do itemow, plecaki oraz grapplery których crafting
+        <br/>
+        można znaleźć w zakładce <b>Craftingi</b>
+        <br/>
+        - na serwerze jest antylogaut który trwa 10 sekund od uderzenia drugiego gracza
+        <br/>
+        a po wyjściu z servera podczas antylogautu umiera się
+        <br/>
+        - na serwerze są umiejętności które się wbijają podczas gry
+        <br/>
+        - można dodawać kolory do nazw w kowadle np. jeśli chcemy zmienić nazwę
+        <br/>
+        jakiegoś bloku i nazwie się teb blok w kowadle <b>"&4nazwa_bloku"</b> nazwa bloku
+        <br/>
+        będzie się wyświetlała na czerwono
+        <br/>
+        <b>Kolory:</b>
+        <br/>
+        <b>&c</b> - czerwony
+        <br/>
+        <b>&4</b> - ciemnoczerwony
+        <br/>
+        <b>&e</b> - żółty
+        <br/>
+        <b>&6</b> - złoty
+        <br/>
+        <b>&a</b> - zielony
+        <br/>
+        <b>&2</b> - ciemnozielony
+        <br/>
+        <b>&b</b> - morski
+        <br/>
+        <b>&3</b> - ciemnomorski
+        <br/>
+        <b>&9</b> - niebieski
+        <br/>
+        <b>&1</b> - ciemnoniebiski
+        <br/>
+        <b>&d</b> - Jasnopurpurowy
+        <br/>
+        <b>&5</b> - Ciemnopurpurowy
+        <br/>
+        <b>&f</b> - biały
+        <br/>
+        <b>&7</b> - szary
+        <br/>
+        <b>&8</b> - ciemnoszary
+        <br/>
+        <b id="komendy">&0</b> - czarny
+        <br/>
+        - dostępna jest mapa serwera --> <a href="http://localhost:8123"><b>Mapa</b></a>
+    </div>
+
+    <div id="komk">
+        <b>Komendy</b>
+    </div>
+
+    <div id="komb"></div>
+
+    <div  id="textt">
+        <b>/menu</b> - otwiera menu z możliwościami np. teleportacji na spawn albo do domu
+        <br/>
+        <b>/msg</b> - pisze prywatną wiadomość do gracza
+        <br/>
+        <b>/r</b> - pozwala szybko odpowiedzieć na msg
+        <br/>
+        <b>/spawn</b> - teleportuje na spawn
+        <br/>
+        <b>/createhome</b> - ustawia dom (możliwy jest tylko jeden dom do ustawienia)
+        <br/>
+        <b>/home</b> - teleportuje do domu
+        <br/>
+        <b>/delhome</b> - usuwa dom
+        <br/>
+        <b>/co inspect</b> - włącza logblock aby go wyłączyć trzeba ponownie wpisać komende
+        <br/>
+        <b>/skills</b> - otwiera menu umiejętności
+        <br/>
+        <b>/hat</b> - umożliwia założenie przedmiotu/bloku trzymanego w ręce na głowe
+        <br/>
+        <b>/sit</b> - umożliwia siadanie
+        <br/>
+        <b>/crawl</b> - umożliwia czołganie się
+        <br/>
+        <b>/playtime</b> - możliwość sprawdzenia ile czasu spędziło się na serwerze
+        <br/>
+        <b>/statistic wartość</b> - sprawia, że wyświetla statystyki graczy z wartości podanej
+        <br/>
+        w komendzie np. jeśli wpiszemy komende <b id="upgradyy">/statistic deaths</b> wyświetla statystyke
+        <br/>
+        śmierci graczy
+    </div>
+
+    <div id="craftc">
+        <b>Craftingi</b>
+    </div>
+
+    <div id="craftb"></div>
+
+    <div id="textt">
+        <b id="upg">Upgrady</b>
+        <br/>
+        <b>Automatyczne przepalanie</b> - automatycznie przepala bloki które niszczysz
+        <br/>
+        (możliwość dodania w kowadle na narzędzia)
+        <br/>
+        <b>Crafting:</b>
+        <br/>
+        <img id="upgr" src="png/przepalanie.png">
+        <br/>
+        <br/>
+        <b>Ender mask</b> - sprawia, że Endermany nie atakują cię gdy na nie patrzysz
+        <br/>
+        (możliwość dodania w kowadle na hełm)
+        <br/>
+        <b>Crafting:</b>
+        <br/>
+        <img id="upgr" src="png/maska.png">
+        <br/>
+        <br/>
+        <b>Niezniszczalność</b> - sprawia, że nie traci się przedmiotu po śmierci
+        <br/>
+        (możliwość dodania w kowadle na narzędzia, broń i zbroje)
+        <br/>
+        <b>Crafting:</b>
+        <br/>
+        <img id="upgr" src="png/niez.png">
+        <br/>
+        <br/>
+        <b>Bonusowe życie</b> - dodaje dodatkowe życie
+        <br/>
+        (możliwość dodania w kowadle na zbroje)
+        <br>
+        <b>Crafting:</b>
+        <br/>
+        <img id="upgr" src="png/zycie.png">
+        <br/>
+        <br/>
+        <b>Magnez</b> - sprawia, że drop z mobów lub wykopane bloki wpadają odrazu do
+        <br/>
+        ekwipunku (możliwość dodania w kowadle na narzędzia i bronie)
+        <br/>
+        <b>Crafting:</b>
+        <br/>
+        <img id="upgr" src="png/mag.png">
+        <br/>
+        <br/>
+        <b>Multi miner</b> - wydobywanie wiele bloków naraz | Shift + Break aby wydobyć
+        <br/>
+        jeden blok (możliwość dodania w kowadle na narzędzia)
+        <br/>
+        <b>Crafting:</b>
+        <br/>
+        <img id="upgr" src="png/mine.png">
+        <br/>
+        <br/>
+        <b>Silk touch</b> - sprawia, że można wykopać spawner i jajko smoka
+        <br/>
+        (możliwość dodania w kowadle na narzędzia)
+        <br/>
+        <b>Crafting:</b>
+        <br/>
+        <img id="upgr" src="png/silk.png">
+        <br/>
+        <br/>
+        <b>Miękki upadek</b> - sprawia, że nie dostaje się obrażeń od upadku
+        <br/>
+        (możliwość dodania w kowadle na buty)
+        <br/>
+        <b>Crafting:</b>
+        <br/>
+        <img id="upgr" src="png/fall.png">
+        <br/>
+        <br/>
+        <b>Teleportacja</b> - Miecz: Pozwala na korzystanie z teleportacji na krótki dystans
+        <br/>
+        (shift + prawy przycisk myszy) Łuk: Teleportuje do miejsca, w które strzelono strzałą
+        <br/>
+        (możliwość dodania w kowadle na mmiecz i łuk)
+        <br/>
+        <b>Crafting:</b>
+        <br/>
+        <img id="upgr" src="png/tp.png">
+        <br/>
+        <br/>
+        <b>Przeniesienie enchantu</b> - (możliwość dodania w kowadle na książke) Pozwala na
+        <br/>
+        wydobycie zaklęć z przedmiotów. Używa się w Grindstone
+        <br/>
+        <b>Crafting:</b>
+        <br/>
+        <img id="upgr" src="png/ench.png">
+        <br id="plecaki"/>
+        <br/>
+        <br/>
+        <br/>
+        <b id="upg">Plecaki</b>
+        <br/>
+        <b>Klucz</b> - służy do otwierania plecaków aby otworzyć plecak należy go założyć i użyć klucza
+        <br/>
+        <b>Crafting:</b>
+        <br/>
+        <img id="upgr" src="png/key.png">
+        <br/>
+        <br/>
+        <b>Mały plecak</b>
+        <br/>
+        <b>Crafting:</b>
+        <br/>
+        <img id="upgr" src="png/smallb.png">
+        <br/>
+        <br/>
+        <b>Duży plecak</b>
+        <br/>
+        <b>Crafting:</b>
+        <br/>
+        <img id="upgr" src="png/largeb.png">
+        <br id="grappler"/>
+        <br/>
+        <br/>
+        <br/>
+        <b id="upg">Grappler</b>
+        <br/>
+        <b>Grappler</b> 5 użyć
+        <br/>
+        <b>Crafting:</b>
+        <br/>
+        <img id="upgr" src="png/gp5.png">
+        <br/>
+        <br/>
+        <b>Grappler</b> 10 użyć
+        <br/>
+        <b>Crafting:</b>
+        <br/>
+        <img id="upgr" src="png/gp10.png">
+        <br/>
+        <br/>
+        <b>Grappler</b> 20 użyć
+        <br/>
+        <b>Crafting:</b>
+        <br/>
+        <img id="upgr" src="png/gp20.png">
+        <br/>
+        <br/>
+        <b>Grappler</b> 25 użyć
+        <br/>
+        <b>Crafting:</b>
+        <br/>
+        <img id="upgr" src="png/gp25.png">
+        <br/>
+        <br/>
+        <b>Grappler</b> 40 użyć
+        <br/>
+        <b>Crafting:</b>
+        <br/>
+        <img id="upgr" src="png/gp40.png">
+        <br/>
+        <br/>
+        <b>Grappler</b> 100 użyć
+        <br/>
+        <b>Crafting:</b>
+        <br/>
+        <img id="upgr" src="png/gp100.png">
+    </div>
+
+    <section class="banner"></section>
+
+    <script>
+        let timVine = document.getElementById("tim-vine");
+    let navbar = document.getElementById("main-nav");
+
+    let navPos = navbar.getBoundingClientRect().top;
+
+    window.addEventListener("scroll", e => {
+    let scrollPos = window.scrollY;
+    if (scrollPos > navPos) {
+        navbar.classList.add('sticky');
+        header.classList.add('navbarOffsetMargin');
+    } else {
+        navbar.classList.remove('sticky');
+        header.classList.remove('navbarOffsetMargin');
+    }
+    });
+    </script>
+
+</body>
+</html>
